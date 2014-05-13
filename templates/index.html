@@ -89,14 +89,17 @@
     <div class="row-fluid">
         <div class="{{css_class}}">
             <header>
-            <h1 id="recent-posts">Recent Posts <a id="allposts" href="{{ SITEURL }}/archives.html">all posts</a></h1>
+            <h2 id="recent-posts">Recent Posts <a id="allposts" href="{{ SITEURL }}/archives.html">All Posts</a></h2>
             </header>
         <div class="recent-posts">
             {% for article in articles %}
             {% from '_includes/_defaults.html' import RECENT_ARTICLES_COUNT with context %}
             {% if loop.index0 < RECENT_ARTICLES_COUNT %}
             <article>
-                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
+                <h3>{{ article.title }}</h3>
+                {% if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}
+                <div class="summary">{{ article.summary }} <a href="{{ SITEURL }}/{{ article.url }}">[ more… ]</a>
+                </div>
                 <section>
                     posted in
                 <a href="{{ SITEURL }}/categories.html#{{ article.category.slug }}-ref">{{ article.category }}</a>
@@ -108,6 +111,7 @@
             {% endif %}
             {% endfor %}
         </div>
+
         </div>
     </div>
     {% endif %}
