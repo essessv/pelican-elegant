@@ -6,6 +6,7 @@ Version 2.0 (under development)
 * Upgraded to Tipue Search 3.1
 * Support for `custom.css`
 * [Stat Counter Analytics ](http://statcounter.com/) support
+* Google Universal Analytics support
 * Support for custom icons for social profiles
 * Support for Pelican (>3.3) new metadata `modified`
 * Support for Social Media Tags
@@ -16,7 +17,6 @@ Version 2.0 (under development)
 * Add Disqus comments to Pages
 * All customizable variables consolidated in a single `_defaults.html`, making
   it easier for you to customize or even *localize* the theme
-* Rename `SITESUBTITLE` to `SITE_SUBTITLE`
 
 Performance
 -----------
@@ -47,6 +47,7 @@ Visual Style
 * Fixed: Articles under tag heading on tags page are not sorted
 * Fixed: URL scheme for blogs which are not published to the root folder
 * Fixed: Footer is always under the fold even on smaller length web pages
+* Fixed: Site Name and top navigation menu move to left on wide displays
 * Fixed: Page link is not active in the navbar if `SAVE_PAGE_AS` is not set to
   default
 
