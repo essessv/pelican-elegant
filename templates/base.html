@@ -24,6 +24,9 @@
         {% if GOOGLE_PLUS_PROFILE_URL %}
         <link rel="author" href={{GOOGLE_PLUS_PROFILE_URL}} />
         {% endif %}
+        {% if GOOGLE_APPS_VERIFICATION%}
+        <meta name="google-site-verification" content={{GOOGLE_APPS_VERIFICATION}} />
+        {% endif %}
         {% from '_includes/_defaults.html' import TWITTER_USERNAME with context %}
         {%if TWITTER_USERNAME %}
         <meta name="twitter:creator" content="@{{TWITTER_USERNAME}}">
